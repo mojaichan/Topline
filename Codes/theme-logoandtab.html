@@ -1,0 +1,88 @@
+<!-- Additional to head -->
+
+
+<!-- text placed in the theme section -->
+<tr>
+	<td>
+		<table width="990" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="219"><a href="<%=getCurrentAttribute('site','homepageurl')%>"><img src="/site/images/logo.jpg" width="217" height="120" border="0" /></a></td>
+				<td width="771">
+					<table width="740" border="0" align="right" cellpadding="4" cellspacing="0">
+					  <tr>
+						<!-- image at the middle -->
+						<td width="473" rowspan="2" align="left"><img src="/site/images/top.jpg" width="371" height="82" border="0" usemap="#Map" />
+							<map name="Map">
+								 <area shape="rect" coords="240,62,280,82" href="mailto:tiffany@topline-furniture.com" alt="Email to us">
+							</map>
+						</td>
+						<td height="50"  colspan="2" align="right">
+							<table width="100" border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+									<form onSubmit="window.location.href='/s.nl?sc=10&amp;category=&amp;search='+escape(document.forms['searchportlettag'].elements['search'].value);return false;" id="searchportlettag" name="searchportlettag" method="post"/>	
+									<td><input type="text" name="search" id="search" style=" background-image:url(/site/images/bg-search.jpg); background-repeat:no-repeat; width:209px; height:26px; border:0; padding-left:5px;" border="0" value="SEARCH" onclick="this.value='';" /> </td>
+									<td valign="top">  <input type="submit" src="/site/images/search-go.jpg" border="0" name="button" id="button" style="background-image:url(/site/images/search-go.jpg); width:28px; height:25px; border:0; text-indent:-999px; padding-left:5px;"  onClick="window.location.href='/s.nl?sc=10&amp;category=&amp;search='+escape(document.forms['searchportlettag'].elements['search'].value);return false;return false;" /></form></td>
+								  </tr>
+							</table>
+						</td>
+					  </tr>
+					  <tr>
+						<td width="90" height="34"  align="left" class="header-links" style="text-transform:uppercase;"><a href="<NLCUSTOMERCENTERURL>"><strong>My Account</strong></a></td>
+						<!-- logout link for test purpose -->
+						<td><a href="https://checkout.netsuite.com/s.nl?c=759368&logoff=T">logout</a> </td>
+						<td><%=getCurrentAttribute('customer','firstname')%><td>
+						<!-- end logout test -->
+						<td width="129" align="right" style="text-transform:uppercase;" class="header-links"><a href="<NLLOGINURL>"><strong>Login</strong></a></td>
+					  </tr>
+					  <tr>
+						<td colspan="3">
+							<table width="264" border="0" align="right" cellpadding="0" cellspacing="0" class="header-links">
+							  <tr>
+								
+								<td width="30"><a href="<NLCARTURL>"><img src="/site/images/cart-img.jpg" width="28" height="24" border="0" /></a></td>
+								<td width="5">&nbsp; </td>
+								<td width="102" nowrap><NLCARTITEMCOUNT> Items   |  <NLCARTTOTAL></td>
+								<td width="122"><a href="&lt;NLCHECKOUTURL&gt;"><img src="/site/images/checkout.jpg" width="122" height="26" border="0" /></a></td>
+								</tr>
+							</table>
+						</td>
+					  </tr>
+					</table>
+				</td>
+			</tr>
+	<!-- Navigation Menu -->
+			<tr>
+				<td colspan="2">
+					<ul class="dropdown-menu">
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/.f">Online Catalog</a>
+							<ul>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707370/.f">BEDROOM</a></li>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707371/.f">DINING ROOM</a></li>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707372/.f">SEATING</a></li>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707373/.f">OCCASIONAL</a></li>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707374/.f">HOME</a></li>
+								<li><a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.707376/.f">YOUTH</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/sc.21/.f">Promotion</a>
+						</li>
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.2112664/.f">News</a>
+						</li>
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/sc.15/category.2112667/.f">Download</a>
+						</li>
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/it.I/id.11/.f">New Dealer Application</a>
+						</li>
+						<li>
+							<a href="http://shopping.netsuite.com/s.nl/c.759368/it.I/id.4/.f">About us</a>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>

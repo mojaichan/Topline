@@ -1,0 +1,51 @@
+/* this is the CSS for "NEWS" and "DOWNLOAD" */
+
+.news_cell,.download_cell{
+	padding:20px 0;
+	width:950px;
+}
+.news_cell{border-top:1px solid #c4a15f;}
+.download_cell{border-bottom:2px solid #92d050;}
+h1,{
+	margin-bottom:25px;
+}
+.news_cell img, .news_info{
+	float:left;
+}
+.news_cell:after{
+	content:".";
+	visibility:hidden;
+	clear:both;
+	height:0;
+}
+.news_info{margin-left:45px;width:600px;}
+.news_info h3 {font-size:14pt;color:#444444;}
+.news_info p, .news_info p a {margin:5px 0; }
+.news_info p { color:#888888;font-size:12pt;}
+.news_info p a { color:#eb7411;font-size:14pt;}
+.news_info p a:hover {text-decoration:underline;}
+
+.download_description{ margin-bottom:30px;}
+.download_description a{color:blue;}
+.download_description a:hover{text-decoration:underline;}
+.download_heading, .download_cell{
+	border-bottom: 2px solid #92d050;
+}
+.download_heading span{
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width:32.5%;
+	font-size:16pt;
+	color:#92d050;
+	text-align:center;
+	margin-bottom:10px;
+}
+.download_cell table {width:950px;}
+.download_cell table td{
+	font-size:14pt;
+	width:32.8%;
+	text-align:center;
+}
+.download_link a{display:block;height:1.2em;color:blue;}
+.download_link a:hover{text-decoration:underline;}

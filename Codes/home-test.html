@@ -1,0 +1,67 @@
+<html>
+<head>
+<script src="lib/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="lib/unslider.js" type="text/javascript"></script>
+
+<style>
+	ol,ul,div,li {margin:0; padding:0;}
+	#sliding {width:800px;position:relative;float:left;}
+	#slideshow-wrap {position: relative; overflow:auto; }
+	#slideshow-wrap li {list-style:none;}
+	#slideshow-wrap ul li {float: left;}
+	#slideshow-wrap .dots li {opacity: 0.4;cursor:pointer;margin:0 4px;height:6px;width:6px;display:inline-block;border:2px solid #FFFFFF; border-radius:6px;text-indent:-999em;}
+	#slideshow-wrap .dots li.active	{background: none repeat scroll 0 0 #FFFFFF;opacity: 1;}
+	#slideshow-wrap .dots {bottom: 20px;right: 20px;position: absolute;}
+	#quick_portlets {float:left;}
+	#promotions {clear:both;}
+</style>
+</head>
+<body>
+<!-- Message content in "Home" Tab -->
+<div id="sliding">
+<div id="slideshow-wrap">
+	<ul>
+		<li><img src="images/01_home_18.jpg" width="800" height="144" /></li>
+		<li><img src="images/01_home_20.jpg" width="800" height="144" /></li>
+		<li><img src="images/01_home_22.jpg" width="800" height="144" /></li>
+		<li><img src="images/01_home_23.jpg" width="800" height="144" /></li>
+		<li><img src="images/01_home_24.jpg" width="800" height="144" /></li>
+	</ul>
+</div>
+</div>
+<div id="quick_portlets">
+	<ul>
+		<li><a href="#news">News</a></li>
+		<li><a href="#quickorder">Quick Order</a></li>
+		<li><a href="#download"></a>Downloads</li>
+	</ul>
+</div>
+
+<br />
+<table id="promotions" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="192"><img src="images/01_home_18.jpg" width="192" height="144" /></td>
+		<td width="190"><img src="images/01_home_20.jpg" width="192" height="144" align="right" /></td>
+		<td width="195"><img src="images/01_home_22.jpg" width="195" height="144" align="right" /></td>
+		<td width="198"><img src="images/01_home_23.jpg" width="197" height="144" /></td>
+		<td width="200"><img src="images/01_home_24.jpg" width="196" height="142" /></td>
+	</tr>
+</table>
+<script>
+	var unslider = $('#slideshow-wrap').unslider({
+		delay:2000,	
+		fluid:false,
+		keys:true,
+		dots:true
+	
+	});
+	$('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
+</script>
+<!-- self made footer -->
+</body>
+</html>

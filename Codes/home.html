@@ -1,0 +1,81 @@
+
+<!-- Item template in Setup pages -->
+<!-- declare tags to show dynamic informations inside "storedetaileddescription" -->
+<%=declareAttribute('sitecategory',2094689,'storedisplaythumbnail')%>
+<%=declareAttribute('sitecategory',2094890,'storedisplaythumbnail')%>
+<%=declareAttribute('sitecategory',2094891,'storedisplaythumbnail')%>
+<%=declareAttribute('sitecategory',2094892,'storedisplaythumbnail')%>
+<%=declareAttribute('sitecategory',2094893,'storedisplaythumbnail')%>
+<%=declareAttribute('sitecategory',2094689,'canonicalurl')%>
+<%=declareAttribute('sitecategory',2094890,'canonicalurl')%>
+<%=declareAttribute('sitecategory',2094891,'canonicalurl')%>
+<%=declareAttribute('sitecategory',2094892,'canonicalurl')%>
+<%=declareAttribute('sitecategory',2094893,'canonicalurl')%>
+
+<td class="home-body">
+<NLPROCESSONCE>
+<table id="home" width="100%" border="0" cellspacing="0" cellpadding="0">
+ 	<tr><td><%=getCurrentAttribute('sitecategory','storedetaileddescription')%></td></tr>
+</table>
+</NLPROCESSONCE>
+</td>
+
+
+<!-- Message content in "Home" Tab --!>
+<script src="/site/lib/unslider.js" type="text/javascript"></script>
+<div id="sliding">
+<div id="slideshow-wrap">
+	<ul>
+		<li><img src="https://system.netsuite.com/c.759368/site/images/slider/H-1.jpg" /></li>
+		<li><img src="https://system.netsuite.com/c.759368/site/images/slider/H-2.jpg" /></li>
+		<li><img src="https://system.netsuite.com/c.759368/site/images/slider/H-3.jpg" /></li>
+		<li><img src="https://system.netsuite.com/c.759368/site/images/slider/H-4.jpg" /></li>
+		<li><img src="https://system.netsuite.com/c.759368/site/images/slider/H-5.jpg" /></li>
+	</ul>
+</div>
+</div>
+<br />
+<table id="promotions" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<a href="<%=getAttribute('sitecategory',2094689,'canonicalurl')%>">				
+				<img src="<%=getAttribute('sitecategory',2094689,'storedisplaythumbnail')%>" align="right" />
+			</a>
+		</td>
+		<td>
+			<a href="<%=getAttribute('sitecategory',2094890,'canonicalurl')%>">	
+				<img src="<%=getAttribute('sitecategory',2094890,'storedisplaythumbnail')%>" align="right" />
+			</a>
+		</td>
+		<td>
+			<a href="<%=getAttribute('sitecategory',2094891,'canonicalurl')%>">	
+				<img src="<%=getAttribute('sitecategory',2094891,'storedisplaythumbnail')%>" align="right" />
+			</a>
+		</td>
+		<td>
+			<a href="<%=getAttribute('sitecategory',2094892,'canonicalurl')%>">	
+				<img src="<%=getAttribute('sitecategory',2094892,'storedisplaythumbnail')%>" />
+			</a>
+		</td>
+		<td>
+			<a href="<%=getAttribute('sitecategory',2094893,'canonicalurl')%>">	
+				<img src="<%=getAttribute('sitecategory',2094893,'storedisplaythumbnail')%>"/>
+			</a>
+		</td>
+	</tr>
+</table>
+<script>
+	var unslider = $('#slideshow-wrap').unslider({
+		delay:2000,	
+		fluid:false,
+		keys:true,
+		dots:true
+	
+	});
+	$('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
+</script>

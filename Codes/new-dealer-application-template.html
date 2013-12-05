@@ -1,0 +1,115 @@
+
+<html>
+<head>
+<style>
+label{
+	display:inline-block;
+	margin-top:12px;
+	margin-right:30px;
+	width:200px;
+	text-align:right;
+}
+input,select{
+	width:250px;
+	display:inline-block;
+}
+.form_wrapper {margin: 0 auto; width:500px;}
+.form_wrapper h1{
+	text-align:center;
+}
+#firstname_fs input, #lastname_fs input{
+}
+#submit_form{
+	display:block;
+	width:80px;
+	height:25px;
+	margin:25px 0;
+}
+.reminder{
+	font-weight:bold;
+	display:block;
+	padding: 5px 0;
+}
+.manda_field:before{
+	content: '*';
+	color:red;
+}
+</style>
+</head>
+<body>
+<div class="form_wrapper">
+	<h1>Request a New Account</h1>
+	<p>Fill out and submit the form below to request a new online account. Once your account is activated, you will be able to view our wholesale pricing.</p>
+	<NLFORM>
+	<div>
+	<label class="manda_field" for="companyname">Company Name</label>
+	<NLCOMPANYNAME>
+	</div>
+	<div>
+	<label class="manda_field" for="phone">Phone</label>
+	<NLPHONE>
+	</div>
+	<div>
+	<label for="fax">Fax</label>
+	<NLFAX>
+	</div>
+	<div>
+	<label for="url">Web Address</label>
+	<NLURL>
+	</div>
+	<div>
+	<label class="manda_field" for="address1">Street Address</label>
+	<NLADDRESS1>
+	</div>
+	<div>
+	<label for="address2">Street Address 2</label>
+	<NLADDRESS2>
+	</div>
+	<div>
+	<label class="manda_field" for="city">Town/City</label>
+	<NLCITY>
+	</div>
+	<div>
+	<label class="manda_field" for="state">State</label>
+	<NLSTATE>
+	</div>
+	<div>
+	<label class="manda_field" for="country">Country</label>
+	<NLCOUNTRY>
+	</div>
+	<div>
+	<label for="zipcode">Zip</label>
+	<NLZIPCODE>
+	</div>
+	<div>
+	<label class="manda_field" for="password">Password</label>
+	<NLPASSWORD>
+	</div>
+	<div>
+	<span class="reminder">Password MUST be 8 characters minimum, include at least 1 capital letter and 1 number</span>
+	<label class="manda_field" for="password2">Verify Password</label>
+	<NLPASSWORD2>
+	<NLGIVEACCESS>
+	</div>
+	<div>
+	<label for="title">Title</label>
+	<NLTITLE>
+	</div>
+	<div>
+	<label class="manda_field" for="email">Email</label>
+	<NLEMAIL>
+	</div>
+	<div>
+	<label class="manda_field" for="firstname">Contact Person First Name</label>
+	<NLFIRSTNAME>
+	</div>
+	<div>
+	<label class="manda_field" for="lastname">Last Name</label>
+	<NLLASTNAME>
+	</div>
+	<NLCUSTENTITY_PMTMETHOD>
+	<input id="submit_form" type="submit" value="Submit"/>
+	</form>
+</div>
+</body>
+</html>

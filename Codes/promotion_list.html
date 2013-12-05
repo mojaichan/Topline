@@ -1,0 +1,58 @@
+<!-- addition to head -->
+<script language="javascript" type="text/javascript">
+	// This script loads a link to PDF (stored in PROMOTIONAL_PDF tag) only if the customer is logged in
+	var c_email = '<%=getCurrentAttribute('customer','email')%>'; 
+	if (c_email == ' ' || c_email == ''){
+		//Prompt users to login
+		var pdf_output = '';
+	}
+	else{ //output for logged in customer
+		var pdf_output = '<a href="<PROMOTIONAL_PDF>">PDF Download</a>';
+	}
+</script>
+<!-- content put in the template -->
+<td width='100%'>
+	<table width=100%>
+		<!-- this section shows the title&description of the promotion -->
+		<tr>
+			<td>
+				<img class="promotion_image" src="<%=getCurrentAttribute('sitecategory','storedisplayimage')%>" />
+				<div class="promotion_content">
+					<h1><%=getCurrentAttribute('sitecategory','itemid')%></h1>
+					<div class="promotion_detail_description">
+						<%=getCurrentAttribute('sitecategory','storedetaileddescription')%>
+					</div>
+					<div class="pdf_link">
+						<script>
+							document.write(pdf_output);
+						</script>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<!-- the rows below are for item display -->
+		<tr>
+			<td>
+			<table class="denselist_head">
+			<tr>
+				<th class="dense_image">Item image</th>
+				<th class="dense">Item Number</th>
+				<th class="dense">Item Description</th>
+				<th class="dense">Item IL</th>
+				<th class="dense">CA-1</th>
+				<th class="dense">CA-2</th>
+				<th class="dense">Next Avail. Date</th>
+				<th class="dense">Price</th>
+				<th class="dense_sprice">Special Price</th>
+				<th class="dense_button">Qty</th>
+			</tr>
+			</table>
+			<table class="denselist">
+			<tr>
+				<NLITEMLIST>
+			</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+</td>

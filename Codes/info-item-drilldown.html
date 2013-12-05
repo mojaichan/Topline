@@ -1,0 +1,18 @@
+<!-- addition to head -->
+<link href="/site/info_item.css" type="text/css" rel="stylesheet" />
+<HIDELEFT>
+<!-- info item drilldown template -->
+
+<td>
+	<div style="width:997px; border:0;">
+		<div class="page_heading style="">
+			<%=getCurrentAttribute("infoitem", "itemid")%>
+		</div>
+		<div id="info_body">
+			<div id="info_description">
+				<%=getCurrentAttribute("infoitem", "storeDetailedDescription")%>
+			</div>
+		</div>
+	</div>
+</td>
+<script> if("<%=getCurrentAttribute('infoitem', 'storeDisplayImage')%>"==""){document.getElementById('infoimg').style.display='none';}</script>

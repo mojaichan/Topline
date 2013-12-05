@@ -1,0 +1,22 @@
+<style>#left{
+	display:none !important;}</style><td><table width="997" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td height="34" class="catname" style="border-bottom:1px solid #decca8; padding-left:20px;"><%=getCurrentAttribute("infoitem", "itemid")%></td>
+    </tr>
+    <tr>
+      <td height="101"><br />
+<table width="997" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="499" height="389" valign="top" id="infoimg"><img src="<%=getCurrentAttribute('infoitem', 'storeDisplayImage')%>" width="494" height="379" /></td>
+          <td width="10">&nbsp;</td>
+          <td width="488" valign="top" class="testmonials-text"><%=getCurrentAttribute("infoitem", "storeDescription")%><br><%=getCurrentAttribute("infoitem", "featuredDescription")%></td>
+        </tr>
+        <tr>
+          <td height="101" colspan="3" valign="top"  class="testmonials-text"><%=getCurrentAttribute("infoitem", "storeDetailedDescription")%></td>
+        </tr>
+       
+       
+        
+      </table></td>
+    </tr>
+  </table></td><script> if("<%=getCurrentAttribute('infoitem', 'storeDisplayImage')%>"==""){document.getElementById('infoimg').style.display='none';}</script>

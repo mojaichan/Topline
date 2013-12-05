@@ -1,0 +1,244 @@
+
+
+<!-- 
+Codes below are put in Welcome Template of the theme
+
+David Chan 22/11/2013
+-->
+
+<td><table width="997" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td> <img src="/site/images/01_home_14.jpg" width="996" height="407" /></td>
+	  </tr>
+	  <tr>
+		<td></td>
+	  </tr>
+	  <tr>
+		<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td width="192"><img src="/site/images/01_home_18.jpg" width="192" height="144" /></td>
+			<td width="13">&nbsp;</td>
+			<td width="190"><img src="/site/images/01_home_20.jpg" width="192" height="144" align="right" /></td>
+			<td width="8">&nbsp;</td>
+			<td width="195"><img src="/site/images/01_home_22.jpg" width="195" height="144" align="right" /></td>
+			<td width="4">&nbsp;</td>
+			<td width="198"><img src="/site/images/01_home_23.jpg" width="197" height="144" /></td>
+		
+			<td width="200"><img src="/site/images/01_home_24.jpg" width="196" height="142" /></td>
+		  </tr>
+		</table>
+
+
+</td>
+	  </tr>
+	</table></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  style="width: 878px">
+        <!--热门城市展示-->
+        <div style="height: 180px">
+            <div class="index_go_left">
+                <a href="javascript:void(0)">
+                    <img id="lfbut" alt="向左" style="margin-left:-10px" src="img/ui-prev.gif"></a>
+            </div>
+            <div id="demo" class="index_go_midd">
+                <div class="panter_count">
+                  <ul id="List1">
+                        <li><a href="">
+                            <img alt="1" src="/site/images/01_home_18.jpg" width="134"
+                                height="90"></a>
+                            <div class="clear">
+                                <span title="1" class="fl">1</span><span class="fr">￥490</span>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">
+                            <img alt="2" src="/site/images/01_home_20.jpg"
+                                width="134" height="90"></a>
+                            <div class="clear">
+                                <span title="2" class="fl">2</span><span class="fr">￥680</span>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">
+                            <img alt="3" src="/site/images/01_home_22.jpg"
+                                width="134" height="90"></a>
+                            <div class="clear">
+                                <span title="3" class="fl">3</span><span class="fr">￥1920</span>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">
+                            <img alt="4" src="/site/images/01_home_23.jpg"
+                                width="134" height="90"></a>
+                            <div class="clear">
+                                <span title="4" class="fl">4</span><span class="fr">￥1980</span>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">
+                            <img alt="5" src="/site/images/01_home_24.jpg"
+                                width="134" height="90"></a>
+                            <div class="clear">
+                                <span title="F " class="fl">5</span><span class="fr">￥550</span>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="List2">
+                        
+                    </ul>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div class="index_go_right">
+                <a href="javascript:void(0)">
+                    <img id="rgbut" alt="向右" src="img/ui-next.gif"></a>
+            </div>
+        </div>
+        <!--热门城市展示-->
+        <div class="index_mainbg_midd_down_w">
+        </div>
+    </div>
+    <div class="index_mainbg_right" style="width: 18px">
+        <div class="index_mainbg_right_midd_w" style="height: 190px">
+        </div>
+        <div class="index_mainbg_right_down_w">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+
+
+
+<script type="text/javascript">
+
+         //图片滚动列表 mengjia 070816
+         var Speed = 3; //速度(毫秒)
+         var Space = 5; //每次移动(px)
+         var PageWidth = 138; //翻页宽度
+         var fill = 0; //整体移位
+         var MoveLock = false;
+         var MoveTimeObj;
+         var Comp = 0;
+         var AutoPlayObj = null;
+
+         GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+
+         GetObj('demo').scrollLeft = fill;
+
+         GetObj("demo").onmouseover = function () { clearInterval(AutoPlayObj); }
+         GetObj("demo").onmouseout = function () { AutoPlay(); }
+         GetObj("lfbut").onclick = function () {
+             ISL_GoDown();
+             ISL_StopDown();
+         }
+         GetObj("rgbut").onclick = function () {
+             ISL_GoUp();
+             ISL_StopUp();
+         }
+         AutoPlay();
+         function GetObj(objName) {
+         
+             if (document.getElementById) {
+                 return eval('document.getElementById("' + objName + '")')
+             }
+             else {
+                 return eval('document.all.' + objName)
+             }
+         }
+         function AutoPlay() { //自动滚动
+           
+             clearInterval(AutoPlayObj);
+             AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();', 3000); //间隔时间
+         }
+         function ISL_GoUp() { //上翻开始
+             if (MoveLock) return;
+             clearInterval(AutoPlayObj);
+             MoveLock = true;
+             ISL_ScrUp();
+             MoveTimeObj = setInterval('ISL_ScrUp();', Speed);
+         }
+         function ISL_StopUp() { //上翻停止
+             clearInterval(MoveTimeObj);
+             if (GetObj('demo').scrollLeft % PageWidth - fill != 0) {
+                 Comp = fill - (GetObj('demo').scrollLeft % PageWidth);
+                 CompScr();
+             } else {
+                 MoveLock = false;
+             }
+             AutoPlay();
+         }
+         function ISL_ScrUp() { //上翻动作
+             if (GetObj('demo').scrollLeft <= 0) { GetObj('demo').scrollLeft = GetObj('demo').scrollLeft + GetObj('List1').offsetWidth }
+             GetObj('demo').scrollLeft -= Space;
+         }
+         function ISL_GoDown() { //下翻
+             clearInterval(MoveTimeObj);
+             if (MoveLock) return;
+             clearInterval(AutoPlayObj);
+             MoveLock = true;
+             ISL_ScrDown();
+             MoveTimeObj = setInterval('ISL_ScrDown()', Speed);
+         }
+         function ISL_StopDown() { //下翻停止
+             clearInterval(MoveTimeObj);
+             if (GetObj('demo').scrollLeft % PageWidth - fill != 0) {
+                 Comp = PageWidth - GetObj('demo').scrollLeft % PageWidth + fill;
+                 CompScr();
+             } else {
+                 MoveLock = false;
+             }
+             AutoPlay();
+         }
+         function ISL_ScrDown() { //下翻动作
+             if (GetObj('demo').scrollLeft >= GetObj('List1').scrollWidth) { GetObj('demo').scrollLeft = GetObj('demo').scrollLeft - GetObj('List1').scrollWidth; }
+             GetObj('demo').scrollLeft += Space;
+         }
+         function CompScr() {
+             var num;
+             if (Comp == 0) { MoveLock = false; return; }
+             if (Comp < 0) { //上翻
+                 if (Comp < -Space) {
+                     Comp += Space;
+                     num = Space;
+                 } else {
+                     num = -Comp;
+                     Comp = 0;
+                 }
+                 GetObj('demo').scrollLeft -= num;
+                 setTimeout('CompScr()', Speed);
+             } else { //下翻
+                 if (Comp > Space) {
+                     Comp -= Space;
+                     num = Space;
+                 } else {
+                     num = Comp;
+                     Comp = 0;
+                 }
+                 GetObj('demo').scrollLeft += num;
+                 setTimeout('CompScr()', Speed);
+
+             }
+         }
+    </script>
+

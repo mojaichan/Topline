@@ -1,0 +1,130 @@
+/* This CSS document is the general CSS implemented by Fern Ltd for TopLine Furniture */
+
+table,ol,ul,div,li,td,th,p{
+	margin:0; 
+	padding:0;
+	border:0;
+}
+a{
+	text-decoration:none;
+}
+td, div, th {
+	font-family:Verdana, Helvetica, sans-serif;
+}
+h1,h2,h3,h4{
+	color: #c4a15f;
+}
+/* CSS for different pages */
+
+.page_heading{ /* header page showing the itemid */
+	font-family: "Optima LT Std Medium;";
+	font-size: 18px;
+	color: #c4a15f;
+	text-transform: uppercase;
+	padding:3px 20px;
+	padding-left:20px;
+	margin-bottom:15px;
+	border-bottom:1px solid #decca8;
+}
+
+/* CSS specific for homepage */
+#sliding {
+	width:950px;
+	position:relative;
+	float:left;
+}
+#slideshow-wrap {
+	position: relative; 
+	overflow:auto; 
+	margin-bottom:20px;
+}
+#slideshow-wrap li {list-style:none;}
+#slideshow-wrap ul li {float: left;}
+#slideshow-wrap .dots li {
+	opacity: 0.4;
+	cursor:pointer;
+	margin:0 4px;
+	height:6px;
+	width:6px;
+	display:inline-block;
+	border:2px solid #FFFFFF;
+	border-radius:6px;
+	text-indent:-999em;
+}
+#slideshow-wrap img{
+	width:950px;
+}
+#slideshow-wrap .dots li.active {
+	background: none repeat scroll 0 0 #FFFFFF;
+	opacity: 1;
+}
+#slideshow-wrap .dots {
+	bottom: 20px;
+	right: 20px;
+	position: absolute;
+}
+#quick_portlets {float:left; margin:50px 15px;}
+#quick_portlets li{list-style:none;}
+#quick_portlets li a{
+	display:block;
+	width:120px;
+	padding:15px 0px;
+	margin:2px 0;
+	background-color:#7f7f7f;
+	color:white;
+	border:1px solid white;
+	border-radius:12px;
+	font-size:12pt;
+	height:1.5em;
+	text-align:center;
+}
+#promotions {clear:both;}
+#promotions td {
+	width:180px;
+	padding:0 5px;
+}
+#promotions a img{ /*thumbnails of promotions in home page */
+	width:180px;
+}
+/* end of homepage CSS */
+
+/* css of promotion item list */
+.promotion_image,.promotion_content{
+	float:left;
+}
+.promotion_image{
+	width:400px;
+}
+.promotion_content{
+	margin-left:20px;
+	padding:10px 0;
+	width:515px;
+}
+.promotion_detail_description{
+	margin:15px 0;
+	font-size:12pt;
+}
+.pdf_link{
+	margin:25px 0;
+	font-size:12pt;
+}
+.pdf_link a{
+	color:blue;
+}
+
+/* end of promotion item list CSS */
+/* denselist CSS (also for related item) */
+.denselist,.denselist_head{width:940px;}
+.denselist_head{
+	border-top:2px solid #c4a15f;
+	border-bottom: 1px solid black;
+}
+.denselist  table td,.denselist_head{
+	padding:10px 0; 
+}
+.dense,.dense_sprice{width:85px;}
+.dense_image{width:105px;}
+.dense_button{width:140px;}
+.dense,.dense_image,.dense_buton,.dense_sprice{font-size:10pt;text-align:center;padding:3px 0;}
+.dense_sprice {color:red;}
+/* end of denselist */
